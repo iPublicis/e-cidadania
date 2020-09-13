@@ -1,7 +1,12 @@
 e-cidadania
 ===========
 
-Current version: 0.1.9 alpha
+.. image:: https://badge.fury.io/gh/cidadania%2Fe-cidadania.png
+    :target: http://badge.fury.io/gh/cidadania%2Fe-cidadania
+.. image:: http://i.imgur.com/BeE14Bl.png
+    :target: http://python.org
+.. image:: http://i.imgur.com/5ldxDJl.png
+    :target: http://djangoproject.com
 
 e-cidadania is a project to develop an open source application for citizen
 participation, which can be used for debates, proposals, trusted voting,
@@ -27,10 +32,14 @@ If you don't want to create an isolated development environment:
     sudo pip install -r requirements.txt
 
 * Configure *src/e_cidadania/settings/production.py* to you desire.
-* Set *src/e_cidadania/settings/__init__.py* DEBUG to False 
+* Set *src/e_cidadania/settings/__init__.py* DEBUG to False
 * Generate the database with::
 
     python manage.py syncdb
+
+* Make all the south migrations::
+
+    pytohn manage.py migrate
 
 * Copy all the static files::
 
@@ -39,6 +48,8 @@ If you don't want to create an isolated development environment:
 * Run the development server
 
     python manage.py runserver
+
+**e-cidadania currently supports python 2.7.X. The work for porting to python 3 is on the "python3" branch.**
 
 Demonstration
 -------------
